@@ -2,8 +2,14 @@
 import '@/styles/globals.css'
 import Layout from '@/layouts/Layout.astro'
 import { EmployerLogin } from '@/components/Login'
+import { Content } from '@/components/Content'
+import { Menu } from '@/components/Menu';
 ---
 
 <Layout title="Employer Login | CDLE">
 	<EmployerLogin/>
+	<div class="px-12">
+		<Menu/>
+		<Content/>
+	</div>
 </Layout>

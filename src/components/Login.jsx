@@ -7,7 +7,7 @@ import { Info, ArrowRight } from "lucide-react";
 
 export function EmployerLogin() {
   return (
-    <div className="sticky h-screen w-[600px] py-12 flex items-center justify-center bg-gradient-to-b from-blue-950/80 to-blue-950">
+    <div className="sticky h-screen min-w-[720px] py-12 flex items-center justify-center bg-gradient-to-b from-blue-950/80 to-blue-950">
       <Card className="mx-auto grid w-[400px] gap-4 shadow-lg">
         <CardHeader className="space-y-9">
           <img
