@@ -1,15 +1,24 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Info } from "lucide-react";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Info, ArrowRight } from "lucide-react";
 
 export function EmployerLogin() {
   return (
-    <div className="flex items-center justify-center py-12">
-      <div className="mx-auto grid w-[350px] gap-6">
-        <h1 className="text-3xl font-bold tracking-tight">Account Login</h1>
-        <div className="grid gap-4">
+    <div className="sticky h-screen w-[600px] py-12 flex items-center justify-center bg-gradient-to-b from-blue-950/80 to-blue-950">
+      <Card className="mx-auto grid w-[400px] gap-4 shadow-lg">
+        <CardHeader className="space-y-9">
+          <img
+            src="/assets/cdle-logo.svg"
+            alt="CDLE Logo"
+            width="192px"
+            height="auto"
+          />
+          <h1 className="text-3xl font-bold tracking-tight">Account Login</h1>
+        </CardHeader>
+        <CardContent className="grid gap-4">
           <div className="grid gap-2">
             <div className="flex items-center">
               <Label htmlFor="user_id">User ID</Label>
@@ -36,48 +45,52 @@ export function EmployerLogin() {
           </div>
           <Button
             type="submit"
-            className="w-full bg-blue-950 hover:bg-blue-950/90"
+            className="mt-2 w-full font-semibold bg-blue-950 hover:bg-blue-950/90"
           >
             Login
           </Button>
-        </div>
-        <Card className="mt-4">
-          <CardHeader>
-            <CardTitle className="text-lg flex gap-2 items-center">
-              <Info />
-              New Users
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-pretty">
-            If you are an employer with an active UI account, and have not yet
-            activated your MyUI Employer+ account with a mailed code, emailed
-            link, or otherwise; or need to register a business for a UI account:
-            <a
-              className={`${buttonVariants({
-                variant: "outline",
-              })} mt-4 w-full hover:bg-gold-50`}
-              href="#"
-            >
-              Create an Employer User Account &rarr;
-            </a>
-          </CardContent>
-        </Card>
-        <div className="mt-4 text-sm text-muted-foreground text-pretty">
-          This system is for Official Use Only and contains Personally
-          Identifiable Information (PII). Any misuse or unauthorized disclosure
-          of information may result in both Civil and Criminal penalties.
-        </div>
-      </div>
+          <Separator className="my-6 mb-3" />
+          <div className="space-y-4">
+            <div className="flex justify-center">
+              <Info color="#3d3d3d" />
+            </div>
+            <div className="text-sm text-pretty">
+              If you are an employer with an active UI account, and have not yet
+              activated your MyUI Employer+ account with a mailed code, emailed
+              link, or otherwise; or need to register a business for a UI
+              account:
+              <a
+                className={`${buttonVariants({
+                  variant: "outline",
+                })} mt-4 w-full hover:bg-gold-50`}
+                href="#"
+              >
+                Create an Employer User Account &nbsp;
+                <ArrowRight size={16} color="#3d3d3d" />
+              </a>
+            </div>
+          </div>
+          <Separator className="my-4" />
+          <div className="text-xs text-muted-foreground text-pretty">
+            This system is for Official Use Only and contains Personally
+            Identifiable Information (PII). Any misuse or unauthorized
+            disclosure of information may result in both Civil and Criminal
+            penalties.
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
 
 export function AgentLogin() {
   return (
-    <div className="flex items-center justify-center py-12">
-      <div className="mx-auto grid w-[350px] gap-6">
-        <h1 className="text-3xl font-bold tracking-tight">TPA Login</h1>
-        <div className="grid gap-4">
+    <div className="h-screen w-[600px] py-12 flex items-center justify-center bg-gradient-to-b from-blue-950/80 to-blue-950">
+      <Card className="mx-auto grid w-[400px] gap-9 shadow-lg">
+        <CardHeader>
+          <h1 className="text-3xl font-bold tracking-tight">Account Login</h1>
+        </CardHeader>
+        <CardContent className="grid gap-4">
           <div className="grid gap-2">
             <div className="flex items-center">
               <Label htmlFor="user_id">User ID</Label>
@@ -104,23 +117,45 @@ export function AgentLogin() {
           </div>
           <Button
             type="submit"
-            className="w-full bg-blue-950 hover:bg-blue-950/90"
+            className="mt-2 w-full font-semibold bg-blue-950 hover:bg-blue-950/90"
           >
             Login
           </Button>
-        </div>
-        <div className="mt-4 text-center text-sm">
-          Don&apos;t have an account?{" "}
-          <a href="#" className="underline">
-            Create one
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-muted-foreground text-pretty">
-          This system is for Official Use Only and contains Personally
-          Identifiable Information (PII). Any misuse or unauthorized disclosure
-          of information may result in both Civil and Criminal penalties.
-        </div>
-      </div>
+          <Separator className="my-6 mb-3" />
+          <div className="space-y-4">
+            <div className="flex justify-center">
+              <Info color="#3d3d3d" />
+            </div>
+            <div className="text-sm text-pretty">
+              If you are an employer with an active UI account, and have not yet
+              activated your MyUI Employer+ account with a mailed code, emailed
+              link, or otherwise; or need to register a business for a UI
+              account:
+              <a
+                className={`${buttonVariants({
+                  variant: "outline",
+                })} mt-4 w-full hover:bg-gold-50`}
+                href="#"
+              >
+                Create an Employer User Account &rarr;
+              </a>
+            </div>
+          </div>
+          <Separator className="my-4" />
+          <div className="mt-4 text-center text-sm">
+            Don&apos;t have an account?{" "}
+            <a href="#" className="underline">
+              Create one
+            </a>
+          </div>
+          <div className="mt-4 text-sm text-muted-foreground text-pretty">
+            This system is for Official Use Only and contains Personally
+            Identifiable Information (PII). Any misuse or unauthorized
+            disclosure of information may result in both Civil and Criminal
+            penalties.
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
