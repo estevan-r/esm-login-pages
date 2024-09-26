@@ -1,13 +1,18 @@
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { NewsIcon, CreateIcon } from "@/components/CardIcons";
+import {
+  NewsIcon,
+  CreateIcon,
+  ContactIcon,
+  ProtectIcon,
+} from "@/components/CardIcons";
 import { ArrowRight } from "lucide-react";
 
 export function Content() {
   return (
-    <div className="mt-4 grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-6 lg:grid-cols-2">
-      <Card className="h-full group">
+    <div className="mt-4 grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-6 lg:grid-cols-6">
+      <Card className="h-full group lg:col-span-3">
         <CardHeader>
           <CreateIcon />
           <CardTitle>Need an Account?</CardTitle>
@@ -30,7 +35,7 @@ export function Content() {
         </CardContent>
       </Card>
 
-      <Card className="h-full group">
+      <Card className="h-full group lg:col-span-3">
         <CardHeader>
           <NewsIcon />
           <CardTitle>News and Alerts</CardTitle>
@@ -50,8 +55,9 @@ export function Content() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="h-full group lg:col-span-2">
         <CardHeader>
+          <ContactIcon />
           <CardTitle>Existing UI Accounts</CardTitle>
         </CardHeader>
         <CardContent>
@@ -62,15 +68,22 @@ export function Content() {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Protect Yourself from Scams</CardTitle>
-        </CardHeader>
-        <CardContent>
-          Fraudsters often use spoofed websites—fake sites that copy an official
-          site's design—to trick unsuspecting victims into giving up personal or
-          financial information.
-          <Card className="mt-4 bg-gold-500/10 shadow-lg">
+      <Card className="h-full group flex lg:col-span-4">
+        <div>
+          <CardHeader>
+            <ProtectIcon />
+            <CardTitle className="text-balance">
+              Protect Yourself from Scams
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            Fraudsters often use spoofed websites—fake sites that copy an
+            official site's design—to trick unsuspecting victims into giving up
+            personal or financial information.
+          </CardContent>
+        </div>
+        <div className="p-6 my-auto">
+          <Card className="w-[320px] bg-gold-500/10 shadow-lg">
             <CardHeader className="block p-4 pb-0">
               <Badge className="bg-gold-500 hover:bg-gold-500/80 text-foreground">
                 Remember
@@ -83,7 +96,7 @@ export function Content() {
               website at ColoradoUI.gov.
             </CardContent>
           </Card>
-        </CardContent>
+        </div>
       </Card>
     </div>
   );
