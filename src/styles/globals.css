@@ -68,3 +68,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.pattern {
+  background-image: url("assets/cdle-pattern-blue.svg");
+  background-repeat: repeat;
+  background-size: 104px;
+}

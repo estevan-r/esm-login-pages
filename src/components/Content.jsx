@@ -85,7 +85,7 @@ export function Content() {
         <div className="p-6 my-auto">
           <Card className="w-[320px] bg-gold-500/10 shadow-lg">
             <CardHeader className="block p-4 pb-0">
-              <Badge className="bg-gold-500 hover:bg-gold-500/80 text-foreground">
+              <Badge className="bg-gold-500 hover:bg-gold-500/80 text-foreground shadow-sm">
                 Remember
               </Badge>
             </CardHeader>
@@ -93,7 +93,11 @@ export function Content() {
               CDLE will never send you a text message with a link to log into
               your account. To ensure you access the official portal and not a
               fake site, access your MyUI Employer+ account via CDLE's official
-              website at ColoradoUI.gov.
+              website at{" "}
+              <a href="https://coloradoui.gov" className="underline">
+                ColoradoUI.gov
+              </a>
+              .
             </CardContent>
           </Card>
         </div>
