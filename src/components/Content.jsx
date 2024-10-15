@@ -11,9 +11,9 @@ import { ArrowRight } from "lucide-react";
 
 export function Content() {
   return (
-    <div className="mt-6 flex flex-1 flex-col gap-4 w-[600px] sm:px-6 sm:py-0 md:gap-12">
-      <div className="group">
-        <CardHeader className="p-0 pb-4 flex-row gap-x-2">
+    <div className="py-12 px-6 flex flex-col max-w-[500px] gap-12 bg-blue-100">
+      <Card className="group border-none shadow-none">
+        <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <CreateIcon />
           <CardTitle className="pb-1">Need an Account?</CardTitle>
         </CardHeader>
@@ -26,7 +26,7 @@ export function Content() {
           <a
             className={`${buttonVariants({
               variant: "outline",
-            })} mt-4 shadow-sm group/btn hover:bg-blue-100 transition duration-500 hover:duration-200`}
+            })} mt-2 shadow-sm group/btn hover:bg-blue-100 transition duration-500 hover:duration-200`}
             href="#"
           >
             Create an Account &nbsp;
@@ -35,10 +35,10 @@ export function Content() {
             </div>
           </a>
         </CardContent>
-      </div>
+      </Card>
 
-      <div className="group">
-        <CardHeader className="p-0 pb-4 flex-row gap-x-2">
+      <Card className="group border-none shadow-none">
+        <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <NewsIcon />
           <CardTitle className="pb-1">News and Alerts</CardTitle>
         </CardHeader>
@@ -55,10 +55,10 @@ export function Content() {
           </a>{" "}
           on our website.
         </CardContent>
-      </div>
+      </Card>
 
-      <div className="group">
-        <CardHeader className="p-0 pb-4 flex-row gap-x-2">
+      <Card className="group border-none shadow-none">
+        <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <ContactIcon />
           <CardTitle className="pb-1">Existing UI Accounts</CardTitle>
         </CardHeader>
@@ -68,11 +68,11 @@ export function Content() {
           employer account—you must contact the system administrator for your
           business account.
         </CardContent>
-      </div>
+      </Card>
 
-      <div className="group flex flex-col gap-4">
+      <Card className="group border-none shadow-none">
         <div>
-          <CardHeader className="p-0 pb-4 flex-row gap-x-2">
+          <CardHeader className="p-0 pb-3 flex-row gap-x-2">
             <ProtectIcon />
             <CardTitle className="pb-1 text-balance">
               Protect Yourself from Scams
@@ -84,7 +84,7 @@ export function Content() {
             personal or financial information.
           </CardContent>
         </div>
-        <Card className="max-w-[540px] bg-gold-500/10 shadow-lg">
+        <Card className="mt-4 bg-gold-500/10 rounded-md shadow-md">
           <CardHeader className="block p-3 pb-0">
             <Badge className="bg-gold-500 hover:bg-gold-500/80 text-foreground shadow-sm">
               Remember
@@ -101,7 +101,7 @@ export function Content() {
             .
           </CardContent>
         </Card>
-      </div>
+      </Card>
     </div>
   );
 }

@@ -1,13 +1,21 @@
 import { buttonVariants } from "@/components/ui/button";
 
-export function Menu() {
+export function Header() {
   const link = `${buttonVariants({
     variant: "ghost",
-  })} font-semibold tracking-tight text-muted-foreground transition-colors hover:text-foreground`;
+  })} tracking-tight text-muted-foreground hover:text-foreground hover:bg-blue-100 transition duration-300 hover:duration-200`;
 
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 bg-background border-b">
-      <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+    <header className="top-0 mx-auto flex max-w-[948px] h-16 justify-between items-center gap-4 bg-background border-b">
+      <a href="https://coloradoui.gov">
+        <img
+          src="/assets/cdle-logo.svg"
+          alt="CDLE Logo"
+          width="168px"
+          height="auto"
+        />
+      </a>
+      <nav className="hidden flex-col text-lg font-medium md:flex md:flex-row md:items-center md:text-sm lg:gap-2">
         <a
           href="https://cdle.colorado.gov/employers/myui-employer/resources"
           className={link}
