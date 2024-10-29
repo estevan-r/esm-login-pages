@@ -3,7 +3,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -17,10 +16,11 @@ export function Header() {
     <header className="top-0 mx-auto flex px-4 md:p-0 max-w-[500px] lg:max-w-[1000px] h-16 justify-between items-center gap-4 bg-background border-b">
       <a href="https://coloradoui.gov">
         <img
-          src="/assets/cdle-logo.svg"
+          src="src/assets/cdle-logo.svg"
           alt="CDLE Logo"
           width="168px"
           height="auto"
+          decoding="async"
         />
       </a>
 

@@ -2,7 +2,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="px-4 pt-1 pb-6 w-full text-xs text-pretty text-muted-foreground">
+    <footer className="px-4 pt-4 pb-6 w-full text-xs text-pretty text-muted-foreground">
       <div className="mx-auto max-w-[500px] lg:max-w-[936px]">
         <div className="flex flex-col gap-6 lg:flex-row lg:gap-24 lg:items-center">
           <div className="flex gap-9 sm:gap-6">
@@ -27,10 +27,12 @@ export function Footer() {
           </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:items-center text-balance">
             <img
-              src="/assets/cdle-emblem.svg"
+              src="src/assets/cdle-emblem-solid.svg"
               alt="CDLE Emblem"
               width="48px"
               height="auto"
+              decoding="async"
+              loading="lazy"
             />
             &copy;{currentYear} Colorado Department of Labor and Employment
           </div>

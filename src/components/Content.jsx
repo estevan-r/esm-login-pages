@@ -1,43 +1,11 @@
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  NewsIcon,
-  CreateIcon,
-  ContactIcon,
-  ProtectIcon,
-} from "@/components/CardIcons";
-import { ArrowRight } from "lucide-react";
+import { NewsIcon, ContactIcon, ProtectIcon } from "@/components/CardIcons";
 
 export function Content() {
   return (
-    <div className="py-12 px-4 flex flex-col max-w-[500px] gap-12 bg-blue-100 md:px-6">
-      <Card className="group border-none shadow-none">
-        <CardHeader className="p-0 pb-3 flex-row gap-x-2">
-          <CreateIcon />
-          <CardTitle className="pb-1">Need an Account?</CardTitle>
-        </CardHeader>
-        <CardContent className="p-0">
-          <p>
-            If you are an employer with an active UI account, and have not yet
-            activated your MyUI Employer+ account with a mailed code, emailed
-            link, or otherwise; or need to register a business for a UI account:
-          </p>
-          <a
-            className={`${buttonVariants({
-              variant: "outline",
-            })} mt-2 shadow-sm group/btn hover:bg-blue-100 transition duration-500 hover:duration-200`}
-            href="#"
-          >
-            Create an Account &nbsp;
-            <div className="relative group-hover/btn:translate-x-1 transition duration-500 group-hover/btn:duration-200">
-              <ArrowRight size={16} color="#3d3d3d" />
-            </div>
-          </a>
-        </CardContent>
-      </Card>
-
-      <Card className="group border-none shadow-none">
+    <div className="py-12 px-4 flex flex-col justify-center max-w-[500px] gap-12 md:px-6">
+      <Card className="group border-none rounded-none shadow-none">
         <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <NewsIcon />
           <CardTitle className="pb-1">News and Alerts</CardTitle>
@@ -57,7 +25,7 @@ export function Content() {
         </CardContent>
       </Card>
 
-      <Card className="group border-none shadow-none">
+      <Card className="group border-none rounded-none shadow-none">
         <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <ContactIcon />
           <CardTitle className="pb-1">Existing UI Accounts</CardTitle>
@@ -70,7 +38,7 @@ export function Content() {
         </CardContent>
       </Card>
 
-      <Card className="group border-none shadow-none">
+      <Card className="group border-none rounded-none shadow-none">
         <div>
           <CardHeader className="p-0 pb-3 flex-row gap-x-2">
             <ProtectIcon />
