@@ -11,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Content() {
   return (
-    <div className="py-12 px-6 flex flex-col max-w-[500px] gap-12 bg-blue-100">
+    <div className="py-12 px-4 flex flex-col max-w-[500px] gap-12 bg-blue-100 md:px-6">
       <Card className="group border-none shadow-none">
         <CardHeader className="p-0 pb-3 flex-row gap-x-2">
           <CreateIcon />

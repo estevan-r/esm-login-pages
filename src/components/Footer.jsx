@@ -2,21 +2,30 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="px-12 pt-1 pb-6 w-full text-xs text-pretty text-muted-foreground bg-slate-200">
+    <footer className="px-4 pt-1 pb-6 w-full text-xs text-pretty text-muted-foreground">
       <div className="mx-auto max-w-[500px] lg:max-w-[936px]">
-        <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
-          <div className="flex gap-6">
-            <a href="/" className="underline">
+        <div className="flex flex-col gap-6 lg:flex-row lg:gap-24 lg:items-center">
+          <div className="flex gap-9 sm:gap-6">
+            <a
+              href="/"
+              className="underline transition duration-200 hover:text-foreground"
+            >
               Privacy Statement
             </a>
-            <a href="/" className="underline">
+            <a
+              href="/"
+              className="underline transition duration-200 hover:text-foreground"
+            >
               Accessibility
             </a>
-            <a href="/" className="underline">
+            <a
+              href="/"
+              className="underline transition duration-200 hover:text-foreground"
+            >
               Viewing Tips
             </a>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-col sm:flex-row gap-2 sm:items-center text-balance">
             <img
               src="/assets/cdle-emblem.svg"
               alt="CDLE Emblem"
@@ -48,7 +57,7 @@ export function Footer() {
             criminal activity, such evidence may be provided to Law Enforcement
             Personnel.
           </p>
-          <p className="font-semibold tracking-wide">
+          <p className="font-semibold tracking-wide text-balance">
             ANYONE USING THIS SYSTEM EXPRESSLY CONSENTS TO SUCH MONITORING.
           </p>
         </div>

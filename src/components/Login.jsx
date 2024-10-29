@@ -5,9 +5,9 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card";
 
 export function EmployerLogin() {
   return (
-    <div className="isolate relative overflow-hidden p-12 w-[500px] grid place-items-center bg-gold-200 lg:w-auto">
+    <div className="isolate relative overflow-hidden p-4 w-[500px] max-w-[500px] grid place-items-center bg-gold-200 sm:p-12">
       <div className="absolute w-full h-full [mask:radial-gradient(black_10%,transparent_80%)] pattern"></div>
-      <Card className="z-10 px-8 py-6 grid w-[350px] gap-6 shadow-xl">
+      <Card className="z-10 px-6 py-4 grid max-w-[350px] gap-6 shadow-xl sm:px-8 sm:py-6">
         <CardHeader className="p-0 pb-4">
           <h1 className="text-lg font-bold tracking-tight">Account Login</h1>
         </CardHeader>
@@ -38,7 +38,7 @@ export function EmployerLogin() {
           </div>
           <Button
             type="submit"
-            className="mt-2 w-full font-semibold bg-blue-950 shadow-md transition duration-150 hover:bg-blue-950/80"
+            className="mt-2 w-full font-semibold bg-blue-950 shadow-md transition duration-200 hover:bg-blue-950/80"
           >
             Login
           </Button>
