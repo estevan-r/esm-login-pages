@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import LoginCard from '@/components/LoginCard'
+import LoginForm from '@/components/LoginForm'
+import Content from '@/components/Content'
+import { NewsAndAlerts, ScamProtection } from "@/components/InfoCards"
+---
+
+<Layout title="Third Part Adiminstrator Login | CDLE">
+	<LoginForm>
+		<LoginCard title="TPA Login" />
+	</LoginForm>
+	<Content>
+		<NewsAndAlerts customerType="TPA/Agents" />
+		<ScamProtection />
+	</Content>
+</Layout>
