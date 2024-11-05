@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 export function EmployerLogin() {
   return (
     <div className="isolate relative p-4 w-full max-w-[500px] grid place-items-center sm:p-12">
-      <div className="hidden absolute w-full h-full [mask:radial-gradient(black_60%,transparent_75%)] pattern md:block"></div>
+      <div className="hidden absolute w-full h-full [mask:radial-gradient(black_60%,transparent_75%)] pattern2 md:block"></div>
 
       <Card className="z-10 px-6 py-4 grid max-w-[350px] gap-6 shadow-xl sm:px-8 sm:py-6">
         <CardHeader className="p-0 pb-4">
@@ -66,7 +66,7 @@ export function EmployerLogin() {
             className={`${buttonVariants({
               variant: "outline",
             })} mt-2 shadow-sm group/btn hover:bg-neutral-100 transition duration-500 hover:duration-200`}
-            href="#"
+            href="https://myui.clouduim.cdle.state.co.us/Employer/Revenue/Registration/EmployerRegistration/EmployerSignup.ASPX"
           >
             Create an Account &nbsp;
             <div className="relative group-hover/btn:translate-x-1 transition duration-500 group-hover/btn:duration-200">
