@@ -1,11 +1,19 @@
 ---
-import '@/styles/globals.css'
 import Layout from '@/layouts/Layout.astro'
-import { EmployerLogin } from '@/components/Login'
-import { Content } from '@/components/Content'
+import LoginCard from '@/components/LoginCard'
+import LoginForm from '@/components/LoginForm'
+import Content from '@/components/Content'
+import { CreateAccount, NewsAndAlerts, ExistingAccount, ScamProtection } from "@/components/InfoCards"
 ---
 
 <Layout title="Employer Login | CDLE">
-	<EmployerLogin/>
-	<Content/>
+	<LoginForm>
+		<LoginCard title="Account Login" />
+		<CreateAccount />
+	</LoginForm>
+	<Content>
+		<NewsAndAlerts customerType="employers" />
+		<ExistingAccount />
+		<ScamProtection />
+	</Content>
 </Layout>
