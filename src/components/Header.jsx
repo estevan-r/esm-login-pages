@@ -7,7 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function Header() {
+export default function Header({ isTPA = false }) {
   const link = `${buttonVariants({
     variant: "ghost",
   })} tracking-tight text-muted-foreground hover:text-foreground hover:bg-neutral-100 transition duration-300 hover:duration-200`;
@@ -25,24 +25,35 @@ export function Header() {
       </a>
 
       <nav className="hidden flex-col text-sm font-medium lg:flex lg:flex-row lg:items-center lg:gap-2">
-        <a
-          href="https://cdle.colorado.gov/employers/myui-employer/resources"
-          className={link}
-        >
-          Resource Guides
-        </a>
+        {!isTPA ? (
+          <a
+            href="https://cdle.colorado.gov/employers/myui-employer/resources"
+            className={link}
+          >
+            Resource Guides
+          </a>
+        ) : null}
         <a
           href="https://cdle.colorado.gov/pay-premiums-and-report-wages"
           className={link}
         >
           Premiums Information
         </a>
-        <a
-          href="https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs"
-          className={link}
-        >
-          FAQs
-        </a>
+        {isTPA ? (
+          <a
+            href="https://cdle.colorado.gov/unemployment/myui-employer/third-party-administrator-tpa-faqs"
+            className={link}
+          >
+            FAQs for TPAs
+          </a>
+        ) : (
+          <a
+            href="https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs"
+            className={link}
+          >
+            FAQs
+          </a>
+        )}
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSfVaXGSESD__IRANrMjpBqkN9qyBGaAhaIVXdg37A46XxuKdg/viewform?usp=sf_link"
           className={link}
@@ -60,24 +71,41 @@ export function Header() {
             <Button variant="outline">Menu</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="mr-4 md:mr-0 w-48">
-            <DropdownMenuItem>
-              <a href="https://cdle.colorado.gov/employers/myui-employer/resources">
-                Resource Guides
-              </a>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
+            {!isTPA ? (
+              <>
+                <DropdownMenuItem>
+                  <a href="https://cdle.colorado.gov/employers/myui-employer/resources">
+                    Resource Guides
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+              </>
+            ) : null}
             <DropdownMenuItem>
               <a href="https://cdle.colorado.gov/pay-premiums-and-report-wages">
                 Premiums Information
               </a>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <a href="https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs">
-                FAQs
-              </a>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
+            {isTPA ? (
+              <>
+                <DropdownMenuItem>
+                  <a href="https://cdle.colorado.gov/unemployment/myui-employer/third-party-administrator-tpa-faqs">
+                    FAQs for TPAs
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+              </>
+            ) : (
+              <>
+                <DropdownMenuItem>
+                  <a href="https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs">
+                    FAQs
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+              </>
+            )}
             <DropdownMenuItem>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVaXGSESD__IRANrMjpBqkN9qyBGaAhaIVXdg37A46XxuKdg/viewform?usp=sf_link">
                 Submit Feedback

@@ -1,22 +1,32 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Header from '@/components/Header'
+import Wrapper from '@/components/Wrapper'
 import LoginCard from '@/components/LoginCard'
 import LoginForm from '@/components/LoginForm'
 import Content from '@/components/Content'
-import { AccountButton, NewsAndAlerts, ScamProtection } from "@/components/InfoCards"
+import { NewsAndAlerts, ScamProtection } from "@/components/InfoCards"
 ---
 
 <Layout title="Third Part Administrator Login | CDLE">
-	<LoginForm>
-		<LoginCard title="TPA Login">
-			<AccountButton 
-				text="Create a TPA Account"
-				uri="https://myui.clouduim.cdle.state.co.us/Employer/Revenue/Registration/EmployerRegistration/EmployerSignup.ASPX"
-			/>
-		</LoginCard>
-	</LoginForm>
-	<Content>
-		<NewsAndAlerts customerType="TPA/Agents" />
-		<ScamProtection />
-	</Content>
+	<Header client:load isTPA={true}/>
+	<Wrapper>
+		<LoginForm>
+			<LoginCard title="TPA Login">
+				<div class="mt-2 text-muted-foreground text-center">
+					Don't have a TPA account?
+					<a 
+						href="https://myui.clouduim.cdle.state.co.us/Agent/Core/Navigate.aspx?Go=Revenue.Registration.TPASignUp" 
+						class="font-bold text-blue-950/75 transition duration-200 hover:underline hover:text-blue-950/65"
+					>
+						Sign up
+					</a>
+				</div>
+			</LoginCard>
+		</LoginForm>
+		<Content>
+			<NewsAndAlerts customerType="TPA/Agents" />
+			<ScamProtection />
+		</Content>
+	</Wrapper>
 </Layout>
