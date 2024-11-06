@@ -3,12 +3,17 @@ import Layout from '@/layouts/Layout.astro'
 import LoginCard from '@/components/LoginCard'
 import LoginForm from '@/components/LoginForm'
 import Content from '@/components/Content'
-import { NewsAndAlerts, ScamProtection } from "@/components/InfoCards"
+import { AccountButton, NewsAndAlerts, ScamProtection } from "@/components/InfoCards"
 ---
 
-<Layout title="Third Part Adiminstrator Login | CDLE">
+<Layout title="Third Part Administrator Login | CDLE">
 	<LoginForm>
-		<LoginCard title="TPA Login" />
+		<LoginCard title="TPA Login">
+			<AccountButton 
+				text="Create a TPA Account"
+				uri="https://myui.clouduim.cdle.state.co.us/Employer/Revenue/Registration/EmployerRegistration/EmployerSignup.ASPX"
+			/>
+		</LoginCard>
 	</LoginForm>
 	<Content>
 		<NewsAndAlerts customerType="TPA/Agents" />

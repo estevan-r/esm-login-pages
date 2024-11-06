@@ -9,7 +9,23 @@ import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
-export function CreateAccount() {
+export function AccountButton({ text, uri }) {
+  return (
+    <a
+      className={`${buttonVariants({
+        variant: "outline",
+      })} mt-2 shadow-sm group/btn hover:bg-neutral-100 transition duration-500 hover:duration-200`}
+      href={uri}
+    >
+      {text} &nbsp;
+      <div className="relative group-hover/btn:translate-x-1 transition duration-500 group-hover/btn:duration-200">
+        <ArrowRight size={16} color="#3d3d3d" />
+      </div>
+    </a>
+  );
+}
+
+export function CreateAccount({ children = null }) {
   return (
     <Card className="z-10 group mt-6 px-6 py-4 max-w-[350px] shadow-xl sm:px-8 sm:py-6">
       <CardHeader className="flex-row gap-x-2 p-0 pb-4">
@@ -22,17 +38,7 @@ export function CreateAccount() {
           activated your MyUI Employer+ account, or need to register a business
           for a UI account:
         </p>
-        <a
-          className={`${buttonVariants({
-            variant: "outline",
-          })} mt-2 shadow-sm group/btn hover:bg-neutral-100 transition duration-500 hover:duration-200`}
-          href="https://myui.clouduim.cdle.state.co.us/Employer/Revenue/Registration/EmployerRegistration/EmployerSignup.ASPX"
-        >
-          Create an Account &nbsp;
-          <div className="relative group-hover/btn:translate-x-1 transition duration-500 group-hover/btn:duration-200">
-            <ArrowRight size={16} color="#3d3d3d" />
-          </div>
-        </a>
+        <div className="mt-1">{children}</div>
       </CardContent>
     </Card>
   );

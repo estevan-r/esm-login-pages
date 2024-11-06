@@ -3,13 +3,18 @@ import Layout from '@/layouts/Layout.astro'
 import LoginCard from '@/components/LoginCard'
 import LoginForm from '@/components/LoginForm'
 import Content from '@/components/Content'
-import { CreateAccount, NewsAndAlerts, ExistingAccount, ScamProtection } from "@/components/InfoCards"
+import { AccountButton, CreateAccount, NewsAndAlerts, ExistingAccount, ScamProtection } from "@/components/InfoCards"
 ---
 
 <Layout title="Employer Login | CDLE">
 	<LoginForm>
 		<LoginCard title="Account Login" />
-		<CreateAccount />
+		<CreateAccount>
+			<AccountButton 
+				text="Create an Account"
+				uri="https://myui.clouduim.cdle.state.co.us/Employer/Revenue/Registration/EmployerRegistration/EmployerSignup.ASPX"
+			/>
+		</CreateAccount>
 	</LoginForm>
 	<Content>
 		<NewsAndAlerts customerType="employers" />
