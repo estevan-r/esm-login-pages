@@ -10,3 +10,4 @@
 • Create Sign Up page
 • Create simple footer for Sign Up page
 • Move footer component to pages
+• Add Skip to Main Content button
