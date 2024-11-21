@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Header from '@/components/Header'
+import AlertDialog from '@/components/Alert'
 import Wrapper from '@/components/Wrapper'
 import LoginCard from '@/components/LoginCard'
 import LoginForm from '@/components/LoginForm'
@@ -11,6 +12,7 @@ import { AccountButton, CreateAccount, NewsAndAlerts, ExistingAccount, ScamProte
 <Layout title="Employer Login | CDLE">
 	<Header client:load/>
 	<Wrapper>
+		<AlertDialog client:load />
 		<LoginForm>
 			<LoginCard title="Account Login" />
 			<CreateAccount>
