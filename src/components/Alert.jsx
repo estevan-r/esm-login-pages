@@ -22,7 +22,7 @@ export default function AlertDialog({ title, children }) {
         {title}
         <div className='h-full self-start'>
           <button type='button' onClick={closeAlert}>
-            <X className='h-4 w-4 text-gold-900 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2' />
+            <X className='h-4 w-4 text-gold-900 opacity-50 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2' />
           </button>
         </div>
       </AlertTitle>
