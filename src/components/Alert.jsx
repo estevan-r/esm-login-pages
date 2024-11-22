@@ -14,7 +14,7 @@ export default function AlertDialog({ title, children }) {
       className={
         hidden
           ? `hidden`
-          : `max-w-[328px] sm:max-w-[350px] lg:max-w-[1000px] mx-4 sm:mx-0 bg-gold-500/30 text-gold-900 border-gold-500/50 shadow-md`
+          : `max-w-[328px] sm:max-w-[350px] lg:max-w-[1000px] mx-4 sm:mx-0 bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md`
       }
     >
       <TriangleAlert className='h-4 w-4' color='#74450f' />
