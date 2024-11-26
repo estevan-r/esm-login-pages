@@ -4,7 +4,13 @@ export default function Footer({ isForm = false }) {
   return (
     <footer className='px-4 pt-4 pb-6 w-full text-xs text-pretty text-muted-foreground'>
       <div className='mx-auto max-w-[500px] lg:max-w-[936px]'>
-        <div className='flex flex-col gap-6 lg:flex-row lg:gap-24 lg:items-center'>
+        <div
+          className={`flex flex-col gap-6 ${
+            isForm
+              ? 'justify-center items-center'
+              : 'lg:flex-row lg:gap-0 lg:justify-between lg:items-center'
+          }`}
+        >
           <div className='flex gap-9 sm:gap-6'>
             <a
               href='/'
@@ -38,9 +44,9 @@ export default function Footer({ isForm = false }) {
           </div>
         </div>
 
-        <div className='mt-6 flex flex-col gap-2'>
+        <div className={`mt-6 flex flex-col gap-2 ${isForm && 'items-center'}`}>
           {isForm ? (
-            <p className='font-semibold text-pretty'>
+            <p className='text-center font-semibold text-pretty'>
               This system is for Official Use Only and contains Personally
               Identifiable Information (PII). <br />
               Any misuse or unauthorized disclosure of information may result in

@@ -6,9 +6,12 @@ import { Button, buttonVariants } from '@/components/ui/button';
 
 export default function RegistrationForm({ isTPA = false }) {
   return (
-    <div className='py-6'>
+    <Card className='p-8 shadow-md w-full max-w-[600px]'>
+      <h2 className='text-lg font-bold tracking-tight pb-6'>
+        Personal Information
+      </h2>
       <form>
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-2 gap-4'>
           {/* Title */}
           <div className='col-span-2'>
             <Label htmlFor='title'>Title</Label>
@@ -70,12 +73,7 @@ export default function RegistrationForm({ isTPA = false }) {
           {/* Ext */}
           <div>
             <Label htmlFor='extension'>Ext</Label>
-            <Input
-              id='extension'
-              type='text'
-              autoComplete='tel-extension'
-              required
-            />
+            <Input id='extension' type='text' autoComplete='tel-extension' />
           </div>
           {/* Password */}
           <div>
@@ -100,9 +98,12 @@ export default function RegistrationForm({ isTPA = false }) {
             />
           </div>
           {/* Certify */}
-          <div className='col-span-2 flex space-x-2'>
-            <Checkbox id='terms' className='translate-y-[3px]' />
-            <Label htmlFor='terms' className='leading-normal'>
+          <div className='col-span-2 flex space-x-2 py-4'>
+            <Checkbox id='terms' />
+            <Label
+              htmlFor='terms'
+              className='leading-normal text-xs font-medium text-pretty'
+            >
               By checking this box, I certify that I am authorized by the
               owner/officer of this organization to enter employer information.
               I also certify that I am authorized to function as an
@@ -111,7 +112,7 @@ export default function RegistrationForm({ isTPA = false }) {
           </div>
         </div>
 
-        <div className='flex justify-center gap-4 mt-6'>
+        <div className='flex gap-4 mt-6'>
           <button type='submit' className='button-20'>
             Create Account
           </button>
@@ -125,6 +126,6 @@ export default function RegistrationForm({ isTPA = false }) {
           </a>
         </div>
       </form>
-    </div>
+    </Card>
   );
 }

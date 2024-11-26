@@ -11,7 +11,7 @@ function Logo() {
   return (
     <a
       href='https://coloradoui.gov'
-      className='focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+      className='focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
     >
       <img
         src='src/assets/cdle-logo.svg'

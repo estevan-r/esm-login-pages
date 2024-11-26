@@ -1,13 +1,17 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import { Card } from '@/components/ui/card'
 import { FormHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
+import SkipContent from '@/components/SkipContent'
 import AlertDialog from '@/components/Alert'
+import RegistrationInfo from '@/components/RegistrationInfo'
 import RegistrationForm from '@/components/RegistrationForm'
 import Wrapper from '@/components/Wrapper'
 ---
 
 <Layout title="Employer Registration | CDLE">
+	<SkipContent />
 	<FormHeader/>
 	<Wrapper>
 		<AlertDialog client:load title="Attention Unemployment Claimants and Employers">
@@ -19,7 +23,18 @@ import Wrapper from '@/components/Wrapper'
 				</li>
 			</ul>
 		</AlertDialog>
-		<RegistrationForm />
+
+		<div class='flex flex-col gap-4 my-4 p-6 rounded-[2rem] border bg-neutral-100 text-card-foreground shadow-xl'>
+			<RegistrationInfo title='Create an Employer Account'>
+				<p>
+					Please complete the below form if you need to create a brand new unemployment insurance account, if you have received an activation code to activate your existing unemployment insurance account <strong>OR</strong> if you have an existing unemployment insurance account and have not received any activation information. <strong>Please do not complete this form if you have received an emailed activation link.</strong> You must follow the process for account activation by clicking the link in your email.
+				</p>
+				<p>
+					The below steps will guide you through creating a user profile, validating your email, logging in to our website, and establishing multi factor authentication. You will then be able to proceed to the account registration, or you can authenticate your account by entering either your activation code or by providing us with your employer account number (EAN), federal employer identification number (FEIN) and the Q2 2023 gross wages reported to the Division for this business. Note that this process may also be used by employers who did not have payroll in Q2 2023.
+				</p>
+			</RegistrationInfo>
+			<RegistrationForm client:load />
+		</div>
 	</Wrapper>
 	<Footer isForm />
 </Layout>
