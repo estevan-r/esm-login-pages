@@ -7,7 +7,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export default function Header({ isTPA = false }) {
+export function MainHeader({ isTPA = false }) {
   const link = `${buttonVariants({
     variant: 'ghost',
   })} tracking-tight text-muted-foreground hover:text-foreground hover:bg-neutral-100 transition duration-300 hover:duration-200`;
@@ -122,6 +122,36 @@ export default function Header({ isTPA = false }) {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+      </nav>
+    </header>
+  );
+}
+
+export function FormHeader({ uri = '/' }) {
+  return (
+    <header className='top-0 mx-auto flex px-4 md:p-0 max-w-[500px] lg:max-w-[1000px] h-16 justify-between items-center gap-4 bg-background border-b'>
+      <a
+        href='https://coloradoui.gov'
+        className='focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+      >
+        <img
+          src='src/assets/cdle-logo.svg'
+          alt='CDLE Logo'
+          width='168px'
+          height='auto'
+          decoding='async'
+        />
+      </a>
+
+      <nav className='text-sm font-medium'>
+        <a
+          href={uri}
+          className={buttonVariants({
+            variant: 'outline',
+          })}
+        >
+          Login
+        </a>
       </nav>
     </header>
   );

@@ -20,7 +20,7 @@ export default function LoginCard({ children = null, title }) {
                 Forgot your user id?
               </a>
             </div>
-            <Input id='user_id' type='text' autocomplete='username' required />
+            <Input id='user_id' type='text' autoComplete='username' required />
           </div>
           <div className='mb-2 grid gap-2'>
             <div className='flex items-center'>
@@ -35,7 +35,7 @@ export default function LoginCard({ children = null, title }) {
             <Input
               id='password'
               type='password'
-              autocomplete='current-password'
+              autoComplete='current-password'
               required
             />
           </div>

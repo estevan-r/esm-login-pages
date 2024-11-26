@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Header from '@/components/Header'
+import { MainHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
 import SkipContent from '@/components/SkipContent'
 import AlertDialog from '@/components/Alert'
@@ -13,7 +13,7 @@ import { AccountButton, CreateAccount, NewsAndAlerts, ExistingAccount, ScamProte
 
 <Layout title="Employer Login | CDLE">
 	<SkipContent />
-	<Header client:load/>
+	<MainHeader client:load/>
 	<Wrapper>
 		<AlertDialog client:load title='Attention Unemployment Claimants and Employers'>
 			<ul class='pl-[14px] space-y-2 list-disc'>

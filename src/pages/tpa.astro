@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Header from '@/components/Header'
+import { MainHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
 import AlertDialog from '@/components/Alert'
 import Wrapper from '@/components/Wrapper'
@@ -11,7 +11,7 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 ---
 
 <Layout title="Third Part Administrator Login | CDLE">
-	<Header client:load isTPA={true}/>
+	<MainHeader client:load isTPA={true}/>
 	<Wrapper>
 		<AlertDialog client:load title="Attention Unemployment Claimants and Employers">
 			<ul class="pl-[14px] space-y-2 list-disc">
