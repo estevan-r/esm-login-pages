@@ -40,11 +40,11 @@ export default function Footer({ isForm = false }) {
 
         <div className='mt-6 flex flex-col gap-2'>
           {isForm ? (
-            <p className='font-semibold'>
+            <p className='font-semibold text-pretty'>
               This system is for Official Use Only and contains Personally
-              Identifiable Information (PII). Any misuse or unauthorized
-              disclosure of information may result in both Civil and Criminal
-              penalties.
+              Identifiable Information (PII). <br />
+              Any misuse or unauthorized disclosure of information may result in
+              both Civil and Criminal penalties.
             </p>
           ) : (
             <>

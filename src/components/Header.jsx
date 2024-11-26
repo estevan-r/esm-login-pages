@@ -7,6 +7,23 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
+function Logo() {
+  return (
+    <a
+      href='https://coloradoui.gov'
+      className='focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+    >
+      <img
+        src='src/assets/cdle-logo.svg'
+        alt='CDLE Logo'
+        width='168px'
+        height='auto'
+        decoding='async'
+      />
+    </a>
+  );
+}
+
 export function MainHeader({ isTPA = false }) {
   const link = `${buttonVariants({
     variant: 'ghost',
@@ -14,18 +31,7 @@ export function MainHeader({ isTPA = false }) {
 
   return (
     <header className='top-0 mx-auto flex px-4 md:p-0 max-w-[500px] lg:max-w-[1000px] h-16 justify-between items-center gap-4 bg-background border-b'>
-      <a
-        href='https://coloradoui.gov'
-        className='focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
-      >
-        <img
-          src='src/assets/cdle-logo.svg'
-          alt='CDLE Logo'
-          width='168px'
-          height='auto'
-          decoding='async'
-        />
-      </a>
+      <Logo />
 
       <nav className='hidden flex-col text-sm font-medium lg:flex lg:flex-row lg:items-center lg:gap-2'>
         {!isTPA ? (
@@ -130,18 +136,7 @@ export function MainHeader({ isTPA = false }) {
 export function FormHeader({ uri = '/' }) {
   return (
     <header className='top-0 mx-auto flex px-4 md:p-0 max-w-[500px] lg:max-w-[1000px] h-16 justify-between items-center gap-4 bg-background border-b'>
-      <a
-        href='https://coloradoui.gov'
-        className='focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
-      >
-        <img
-          src='src/assets/cdle-logo.svg'
-          alt='CDLE Logo'
-          width='168px'
-          height='auto'
-          decoding='async'
-        />
-      </a>
+      <Logo />
 
       <nav className='text-sm font-medium'>
         <a
