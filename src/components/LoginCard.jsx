@@ -12,7 +12,7 @@ export default function LoginCard({ children = null, title }) {
         <CardContent className='p-0 grid gap-6'>
           <div className='grid gap-2'>
             <div className='flex items-center'>
-              <Label htmlFor='user_id'>User ID</Label>
+              <Label htmlFor='user-id'>User ID</Label>
               <a
                 href='#'
                 className='ml-auto inline-block text-xs underline text-muted-foreground'
@@ -20,11 +20,11 @@ export default function LoginCard({ children = null, title }) {
                 Forgot your user id?
               </a>
             </div>
-            <Input id='user_id' type='text' autoComplete='username' required />
+            <Input id='user-id' type='text' autoComplete='username' required />
           </div>
           <div className='mb-2 grid gap-2'>
             <div className='flex items-center'>
-              <Label htmlFor='password'>Password</Label>
+              <Label htmlFor='pass'>Password</Label>
               <a
                 href='#'
                 className='ml-auto inline-block text-xs underline text-muted-foreground'
@@ -33,7 +33,7 @@ export default function LoginCard({ children = null, title }) {
               </a>
             </div>
             <Input
-              id='password'
+              id='pass'
               type='password'
               autoComplete='current-password'
               required
