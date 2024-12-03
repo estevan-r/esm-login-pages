@@ -2,21 +2,23 @@ import { useState } from 'react';
 import { TriangleAlert, X } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-export default function AlertDialog({ title, children }) {
+export default function AlertDialog({ title, children, isForm = false }) {
   const [hidden, setHidden] = useState(false);
 
   function closeAlert() {
     setHidden(true);
   }
 
+  const mainClass = hidden
+    ? 'hidden'
+    : 'max-w-[350px] lg:max-w-[1000px] bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md';
+
+  const formClass = isForm
+    ? 'max-w-[324px] sm:max-w-[500px] lg:max-w-[1000px] bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md'
+    : mainClass;
+
   return (
-    <Alert
-      className={
-        hidden
-          ? `hidden`
-          : `max-w-[328px] sm:max-w-[350px] lg:max-w-[1000px] mx-4 sm:mx-0 bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md`
-      }
-    >
+    <Alert className={formClass}>
       <TriangleAlert className='h-4 w-4' color='#74450f' />
       <AlertTitle className='font-bold flex justify-between items-center'>
         {title}

@@ -2,11 +2,11 @@ import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 
 export default function RegistrationForm({ isTPA = false }) {
   return (
-    <Card className='p-8 shadow-md w-full max-w-[600px]'>
+    <Card className='p-8 shadow-md w-full max-w-[450px] lg:max-w-[600px]'>
       <h2 className='text-lg font-bold tracking-tight pb-6'>
         Personal Information
       </h2>
@@ -23,7 +23,7 @@ export default function RegistrationForm({ isTPA = false }) {
             />
           </div>
           {/* First Name */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='first-name'>First Name</Label>
             <Input
               id='first-name'
@@ -33,7 +33,7 @@ export default function RegistrationForm({ isTPA = false }) {
             />
           </div>
           {/* Last Name */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='last-name'>Last Name</Label>
             <Input
               id='last-name'
@@ -50,7 +50,7 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input id='user-id' type='text' autoComplete='username' required />
           </div>
           {/* Email */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='email'>Email</Label>
             <Input
               id='email'
@@ -61,9 +61,9 @@ export default function RegistrationForm({ isTPA = false }) {
             />
           </div>
           {/* Confirm Email */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='confirm-email'>Confirm Email</Label>
-            <Input id='email' type='email' required />
+            <Input id='email-conf' type='email' required />
           </div>
           {/* Phone Number */}
           <div>
@@ -76,7 +76,7 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input id='extension' type='text' autoComplete='tel-extension' />
           </div>
           {/* Password */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='pass'>Password</Label>
             <Input
               id='pass'
@@ -87,10 +87,10 @@ export default function RegistrationForm({ isTPA = false }) {
             />
           </div>
           {/* Confirm Password */}
-          <div>
+          <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='confirm-pass'>Confirm Password</Label>
             <Input
-              id='password'
+              id='pass-conf'
               type='password'
               minLength='14'
               autoComplete='new-password'

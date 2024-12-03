@@ -3,7 +3,7 @@ import { CreateIcon } from '@/components/CardIcons';
 
 export default function RegistrationInfo({ title, children }) {
   return (
-    <Card className='group max-w-[600px] shadow-md'>
+    <Card className='group max-w-[450px] lg:max-w-[600px] shadow-md'>
       <CardHeader className='flex-row space-x-2 items-center'>
         <CreateIcon />
         <CardTitle className='pb-1'>{title}</CardTitle>
