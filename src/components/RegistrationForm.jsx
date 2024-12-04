@@ -3,6 +3,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import HoverInfo from '@/components/HoverInfo';
 import { Checkbox } from '@/components/ui/checkbox';
+import PasswordInput from '@/components/PasswordInput';
 import ValidationMessage from '@/components/ValidationMessage';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -20,12 +21,9 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input
               id='title'
               type='text'
-              className='peer'
               autoComplete='organization-title'
-              placeholder=''
-              required
+              placeholder='Title'
             />
-            <ValidationMessage>Please enter your title</ValidationMessage>
           </div>
           {/* First Name */}
           <div className='col-span-2 sm:col-span-1'>
@@ -33,10 +31,12 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input
               id='first-name'
               type='text'
+              className='peer'
               autoComplete='given-name'
-              placeholder=' '
+              placeholder='First Name'
               required
             />
+            <ValidationMessage />
           </div>
           {/* Last Name */}
           <div className='col-span-2 sm:col-span-1'>
@@ -44,10 +44,12 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input
               id='last-name'
               type='text'
+              className='peer'
               autoComplete='family-name'
-              placeholder=' '
+              placeholder='Last Name'
               required
             />
+            <ValidationMessage />
           </div>
           {/* User ID */}
           <div className='col-span-2'>
@@ -78,15 +80,24 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input
               id='email'
               type='email'
+              className='peer'
               placeholder='example@mail.com'
               autoComplete='email'
               required
             />
+            <ValidationMessage>Please enter a valid email</ValidationMessage>
           </div>
           {/* Confirm Email */}
           <div className='col-span-2 sm:col-span-1'>
             <Label htmlFor='confirm-email'>Confirm Email</Label>
-            <Input id='email-conf' type='email' placeholder=' ' required />
+            <Input
+              id='email-conf'
+              type='email'
+              className='peer'
+              placeholder='example@mail.com'
+              required
+            />
+            <ValidationMessage>Email doesn't match</ValidationMessage>
           </div>
           {/* Phone Number */}
           <div>
@@ -94,51 +105,49 @@ export default function RegistrationForm({ isTPA = false }) {
             <Input
               id='phone'
               type='tel'
+              className='peer'
               autoComplete='tel'
-              placeholder=''
+              placeholder='303-555-1234'
               required
               pattern='\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})'
             />
+            <ValidationMessage />
           </div>
           {/* Ext */}
           <div>
             <Label htmlFor='extension'>Ext</Label>
-            <Input id='extension' type='text' autoComplete='tel-extension' />
+            <Input
+              id='extension'
+              type='text'
+              autoComplete='tel-extension'
+              placeholder='123'
+            />
           </div>
           {/* Password */}
           <div className='col-span-2 sm:col-span-1'>
-            <Label htmlFor='pass'>Password</Label>
-            <Input
-              id='pass'
-              type='password'
-              minLength='14'
-              autoComplete='new-password'
-              placeholder=' '
-              required
-              pattern='.[a-zA-Z0-9][^\n\r\s]{14,}'
-            />
-            <div className='text-xs italic text-muted-foreground mt-1'>
-              Minimum 14 characters. Must contain upper and lower case
-              characters, numbers (0–9), and special characters:
-              ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+            <div className='flex items-center mb-1 space-x-1'>
+              <Label htmlFor='pass'>Password</Label>
+              <HoverInfo>
+                Minimum 14 characters. Must contain upper and lower case
+                characters, numbers (0–9), and special characters:
+                ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+              </HoverInfo>
             </div>
+            <PasswordInput invalidText='Please enter a qualifying password' />
           </div>
           {/* Confirm Password */}
           <div className='col-span-2 sm:col-span-1'>
-            <Label htmlFor='confirm-pass'>Confirm Password</Label>
-            <Input
+            <div className='flex items-center mb-1 space-x-1'>
+              <Label htmlFor='pass-conf'>Confirm Password</Label>
+            </div>
+            <PasswordInput
               id='pass-conf'
-              type='password'
-              minLength='14'
-              autoComplete='new-password'
-              placeholder=' '
-              required
-              pattern='.[a-zA-Z0-9][^\n\r\s]{14,}'
+              invalidText="Password doesn't match"
             />
           </div>
           {/* Certify */}
           <div className='col-span-2 flex space-x-2 py-4'>
-            <Checkbox id='terms' />
+            <Checkbox id='terms' required />
             <Label
               htmlFor='terms'
               className='leading-normal text-xs font-medium text-pretty'
