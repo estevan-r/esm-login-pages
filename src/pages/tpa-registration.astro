@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { FormHeader } from '@/components/Header'
+import Footer from '@/components/Footer'
+import SkipContent from '@/components/SkipContent'
+import AlertDialog from '@/components/Alert'
+import RegistrationInfo from '@/components/RegistrationInfo'
+import RegistrationForm from '@/components/RegistrationForm'
+import Wrapper from '@/components/Wrapper'
+---
+
+<Layout title="TPA Registration | CDLE">
+	<SkipContent />
+	<FormHeader/>
+	<Wrapper>
+		<AlertDialog client:load isForm title="Attention Unemployment Claimants and Employers">
+			<ul class="pl-[14px] space-y-2 list-disc">
+				<li>
+					MyUI+ and MyUI Employer+ will go down at 8 PM on Friday, November
+					22, for scheduled maintenance. The system will be available again
+					the morning of Saturday, November 23.
+				</li>
+			</ul>
+		</AlertDialog>
+
+		<div class='flex flex-col gap-4 my-4 p-6 sm:rounded-[2rem] border bg-neutral-100 text-card-foreground shadow-xl'>
+			<RegistrationInfo title='Create a TPA Account'>
+				<p>
+					Fill in the following form to sign up for an account as an <u>authorized administrator*</u>
+				</p>
+				<p class="italic text-muted-foreground text-balance">
+					*An authorized administrator has been given authority by the registering organization to register and administer TPA functions.
+				</p>
+			</RegistrationInfo>
+			<RegistrationForm client:load />
+		</div>
+	</Wrapper>
+	<Footer client:load isForm />
+</Layout>
