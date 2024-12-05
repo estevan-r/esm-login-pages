@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { Card } from '@/components/ui/card'
 import { FormHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
 import SkipContent from '@/components/SkipContent'
@@ -36,5 +35,5 @@ import Wrapper from '@/components/Wrapper'
 			<RegistrationForm client:load />
 		</div>
 	</Wrapper>
-	<Footer isForm />
+	<Footer client:load isForm />
 </Layout>

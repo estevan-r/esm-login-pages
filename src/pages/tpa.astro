@@ -23,7 +23,7 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 			</ul>
 		</AlertDialog>
 		<LoginForm>
-			<LoginCard title="TPA Login">
+			<LoginCard client:load title="TPA Login">
 				<div class="mt-2 text-muted-foreground text-center">
 					Don't have a TPA account?
 					<a 
@@ -40,5 +40,5 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 			<ScamProtection />
 		</Content>
 	</Wrapper>
-	<Footer />
+	<Footer client:load />
 </Layout>

@@ -1,5 +1,6 @@
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import PasswordInput from '@/components/PasswordInput';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
 export default function LoginCard({ children = null, title }) {
@@ -38,12 +39,10 @@ export default function LoginCard({ children = null, title }) {
                 Forgot your password?
               </a>
             </div>
-            <Input
+            <PasswordInput
               id='pass'
-              type='password'
               placeholder=''
               autoComplete='current-password'
-              required
             />
           </div>
           <button type='submit' className='button-20'>

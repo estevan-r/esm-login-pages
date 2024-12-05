@@ -3,7 +3,12 @@ import { Input } from '@/components/ui/input';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import ValidationMessage from '@/components/ValidationMessage';
 
-export default function PasswordInput({ id = 'pass', invalidText = '' }) {
+export default function PasswordInput({
+  id = 'pass',
+  placeholder = 'Password',
+  autoComplete = 'new-password',
+  invalidText = '',
+}) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -11,8 +16,8 @@ export default function PasswordInput({ id = 'pass', invalidText = '' }) {
       <Input
         id={id}
         type={showPassword ? 'text' : 'password'}
-        autoComplete='new-password'
-        placeholder='Password'
+        autoComplete={autoComplete}
+        placeholder={placeholder}
         className='peer pr-8'
         required
         pattern='.[a-zA-Z0-9][^\n\r\s]{14,}'

@@ -25,7 +25,7 @@ import { AccountButton, CreateAccount, NewsAndAlerts, ExistingAccount, ScamProte
 			</ul>
 		</AlertDialog>
 		<LoginForm>
-			<LoginCard title="Account Login" />
+			<LoginCard client:load title="Account Login" />
 			<CreateAccount>
 				<AccountButton 
 					text="Create an Account"
@@ -39,5 +39,5 @@ import { AccountButton, CreateAccount, NewsAndAlerts, ExistingAccount, ScamProte
 			<ScamProtection />
 		</Content>
 	</Wrapper>
-	<Footer />
+	<Footer client:load />
 </Layout>

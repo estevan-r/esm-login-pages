@@ -72,8 +72,7 @@ export default function RegistrationForm({ isTPA = false }) {
               pattern='[a-zA-Z][a-zA-Z0-9]{6,12}'
             />
             <ValidationMessage>
-              Must be alphanumeric and 6-12 characters. Letters must come before
-              numbers.
+              Please enter a qualifying User ID
             </ValidationMessage>
           </div>
           {/* Email */}

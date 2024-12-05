@@ -1,3 +1,9 @@
+import {
+  PrivacyStatement,
+  ViewingTips,
+  SystemAvailability,
+} from '@/components/FooterDialogs';
+
 export default function Footer({ isForm = false }) {
   const currentYear = new Date().getFullYear();
 
@@ -11,25 +17,16 @@ export default function Footer({ isForm = false }) {
               : 'lg:flex-row lg:gap-0 lg:justify-between lg:items-center'
           }`}
         >
-          <div className='flex gap-9 sm:gap-6'>
+          <div className='flex gap-4 sm:gap-6'>
+            <PrivacyStatement />
             <a
-              href='/'
-              className='underline transition duration-200 hover:text-foreground'
-            >
-              Privacy Statement
-            </a>
-            <a
-              href='/'
+              href='https://cdle.colorado.gov/accessibility'
               className='underline transition duration-200 hover:text-foreground'
             >
               Accessibility
             </a>
-            <a
-              href='/'
-              className='underline transition duration-200 hover:text-foreground'
-            >
-              Viewing Tips
-            </a>
+            <ViewingTips />
+            {isForm && <SystemAvailability />}
           </div>
           <div className='flex flex-col sm:flex-row gap-2 sm:items-center text-balance'>
             <img
