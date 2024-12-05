@@ -9,16 +9,14 @@ export default function AlertDialog({ title, children, isForm = false }) {
     setHidden(true);
   }
 
-  const mainClass = hidden
-    ? 'hidden'
+  const classes = isForm
+    ? 'max-w-[324px] sm:max-w-[500px] lg:max-w-[1000px] bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md'
     : 'max-w-[350px] lg:max-w-[1000px] bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md';
 
-  const formClass = isForm
-    ? 'max-w-[324px] sm:max-w-[500px] lg:max-w-[1000px] bg-gold-500/25 text-gold-900 border-gold-500/50 shadow-md'
-    : mainClass;
+  const style = hidden ? 'hidden' : classes;
 
   return (
-    <Alert className={formClass}>
+    <Alert className={style}>
       <TriangleAlert className='h-4 w-4' color='#74450f' />
       <AlertTitle className='font-bold flex justify-between items-center'>
         {title}

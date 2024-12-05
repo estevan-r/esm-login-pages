@@ -8,7 +8,7 @@ export default function LoginCard({ children = null, title }) {
       <CardHeader className='p-0 pb-4'>
         <h1 className='text-lg font-bold tracking-tight'>{title}</h1>
       </CardHeader>
-      <form>
+      <form className='group'>
         <CardContent className='p-0 grid gap-6'>
           <div className='grid gap-2'>
             <div className='flex items-center'>
@@ -20,7 +20,13 @@ export default function LoginCard({ children = null, title }) {
                 Forgot your user id?
               </a>
             </div>
-            <Input id='user-id' type='text' autoComplete='username' required />
+            <Input
+              id='user-id'
+              type='text'
+              placeholder=''
+              autoComplete='username'
+              required
+            />
           </div>
           <div className='mb-2 grid gap-2'>
             <div className='flex items-center'>
@@ -35,6 +41,7 @@ export default function LoginCard({ children = null, title }) {
             <Input
               id='pass'
               type='password'
+              placeholder=''
               autoComplete='current-password'
               required
             />

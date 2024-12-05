@@ -13,7 +13,7 @@ export default function RegistrationForm({ isTPA = false }) {
       <h2 className='text-lg font-bold tracking-tight pb-6'>
         Personal Information
       </h2>
-      <form noValidate className='group'>
+      <form className='group'>
         <div className='grid grid-cols-2 gap-x-4 gap-y-6'>
           {/* Title */}
           <div className='col-span-2'>
@@ -56,8 +56,10 @@ export default function RegistrationForm({ isTPA = false }) {
             <div className='flex items-center mb-1 space-x-1'>
               <Label htmlFor='user-id'>User ID</Label>
               <HoverInfo>
-                Must be alphanumeric and 6-12 characters. Letters must come
-                before numbers.
+                <ul className='pl-4 list-disc text-balance space-y-2'>
+                  <li>Must be alphanumeric and 6-12 characters.</li>
+                  <li>Letters must come before numbers.</li>
+                </ul>
               </HoverInfo>
             </div>
             <Input
@@ -85,7 +87,9 @@ export default function RegistrationForm({ isTPA = false }) {
               autoComplete='email'
               required
             />
-            <ValidationMessage>Please enter a valid email</ValidationMessage>
+            <ValidationMessage>
+              Please enter a valid email address
+            </ValidationMessage>
           </div>
           {/* Confirm Email */}
           <div className='col-span-2 sm:col-span-1'>
@@ -97,7 +101,7 @@ export default function RegistrationForm({ isTPA = false }) {
               placeholder='example@mail.com'
               required
             />
-            <ValidationMessage>Email doesn't match</ValidationMessage>
+            <ValidationMessage>Email address doesn't match</ValidationMessage>
           </div>
           {/* Phone Number */}
           <div>
@@ -128,9 +132,16 @@ export default function RegistrationForm({ isTPA = false }) {
             <div className='flex items-center mb-1 space-x-1'>
               <Label htmlFor='pass'>Password</Label>
               <HoverInfo>
-                Minimum 14 characters. Must contain upper and lower case
-                characters, numbers (0–9), and special characters:
-                ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+                <ul className='pl-4 list-disc text-balance space-y-2'>
+                  <li>Minimum 14 characters</li>
+                  <li>Must contain upper and lower case characters</li>
+                  <li>Numbers (0–9)</li>
+                  <li>
+                    And special characters:
+                    <br />
+                    ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+                  </li>
+                </ul>
               </HoverInfo>
             </div>
             <PasswordInput invalidText='Please enter a qualifying password' />
