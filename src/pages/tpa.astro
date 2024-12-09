@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import { MainHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
 import AlertDialog from '@/components/Alert'
+import AlertContent from '@/components/AlertContent'
 import Wrapper from '@/components/Wrapper'
 import LoginCard from '@/components/LoginCard'
 import LoginForm from '@/components/LoginForm'
@@ -13,14 +14,8 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 <Layout title="Third Party Administrator Login | CDLE">
 	<MainHeader client:load isTPA={true}/>
 	<Wrapper>
-		<AlertDialog client:load title="Attention Unemployment Claimants and Employers">
-			<ul class="pl-[14px] space-y-2 list-disc">
-				<li>
-					MyUI+ and MyUI Employer+ will go down at 8 PM on Friday, November
-					22, for scheduled maintenance. The system will be available again
-					the morning of Saturday, November 23.
-				</li>
-			</ul>
+		<AlertDialog client:load title="Attention Users">
+			<AlertContent/>
 		</AlertDialog>
 		<LoginForm>
 			<LoginCard client:load title="TPA Login">

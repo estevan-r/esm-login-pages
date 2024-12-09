@@ -58,6 +58,7 @@ export function NewsAndAlerts({ customerType }) {
         phone. For more information, visit the{' '}
         <a
           href='https://cdle.colorado.gov/multi-factor-authentication-mfa'
+          target='_blank'
           className='underline'
         >
           Multi-Factor Authentication page
@@ -111,7 +112,11 @@ export function ScamProtection() {
           CDLE will never send you a text message with a link to log into your
           account. To ensure you access the official portal and not a fake site,
           access your MyUI Employer+ account via CDLE's official website at{' '}
-          <a href='https://coloradoui.gov' className='underline'>
+          <a
+            href='https://coloradoui.gov'
+            target='_blank'
+            className='underline'
+          >
             ColoradoUI.gov
           </a>
           .

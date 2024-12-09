@@ -11,6 +11,7 @@ function Logo() {
   return (
     <a
       href='https://coloradoui.gov'
+      target='_blank'
       className='focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
     >
       <img
@@ -37,6 +38,7 @@ export function MainHeader({ isTPA = false }) {
         {!isTPA ? (
           <a
             href='https://cdle.colorado.gov/employers/myui-employer/resources'
+            target='_blank'
             className={link}
           >
             Resource Guides
@@ -44,6 +46,7 @@ export function MainHeader({ isTPA = false }) {
         ) : null}
         <a
           href='https://cdle.colorado.gov/pay-premiums-and-report-wages'
+          target='_blank'
           className={link}
         >
           Premiums Information
@@ -51,6 +54,7 @@ export function MainHeader({ isTPA = false }) {
         {isTPA ? (
           <a
             href='https://cdle.colorado.gov/unemployment/myui-employer/third-party-administrator-tpa-faqs'
+            target='_blank'
             className={link}
           >
             FAQs for TPAs
@@ -58,6 +62,7 @@ export function MainHeader({ isTPA = false }) {
         ) : (
           <a
             href='https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs'
+            target='_blank'
             className={link}
           >
             FAQs
@@ -65,11 +70,16 @@ export function MainHeader({ isTPA = false }) {
         )}
         <a
           href='https://docs.google.com/forms/d/e/1FAIpQLSfVaXGSESD__IRANrMjpBqkN9qyBGaAhaIVXdg37A46XxuKdg/viewform?usp=sf_link'
+          target='_blank'
           className={link}
         >
           Submit Feedback
         </a>
-        <a href='https://cdle.colorado.gov/fraud-prevention' className={link}>
+        <a
+          href='https://cdle.colorado.gov/fraud-prevention'
+          target='_blank'
+          className={link}
+        >
           Report Fraud
         </a>
       </nav>
@@ -83,7 +93,10 @@ export function MainHeader({ isTPA = false }) {
             {!isTPA ? (
               <>
                 <DropdownMenuItem>
-                  <a href='https://cdle.colorado.gov/employers/myui-employer/resources'>
+                  <a
+                    href='https://cdle.colorado.gov/employers/myui-employer/resources'
+                    target='_blank'
+                  >
                     Resource Guides
                   </a>
                 </DropdownMenuItem>
@@ -91,7 +104,10 @@ export function MainHeader({ isTPA = false }) {
               </>
             ) : null}
             <DropdownMenuItem>
-              <a href='https://cdle.colorado.gov/pay-premiums-and-report-wages'>
+              <a
+                href='https://cdle.colorado.gov/pay-premiums-and-report-wages'
+                target='_blank'
+              >
                 Premiums Information
               </a>
             </DropdownMenuItem>
@@ -99,7 +115,10 @@ export function MainHeader({ isTPA = false }) {
             {isTPA ? (
               <>
                 <DropdownMenuItem>
-                  <a href='https://cdle.colorado.gov/unemployment/myui-employer/third-party-administrator-tpa-faqs'>
+                  <a
+                    href='https://cdle.colorado.gov/unemployment/myui-employer/third-party-administrator-tpa-faqs'
+                    target='_blank'
+                  >
                     FAQs for TPAs
                   </a>
                 </DropdownMenuItem>
@@ -108,7 +127,10 @@ export function MainHeader({ isTPA = false }) {
             ) : (
               <>
                 <DropdownMenuItem>
-                  <a href='https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs'>
+                  <a
+                    href='https://cdle.colorado.gov/unemployment/myui-employer/employer-faqs'
+                    target='_blank'
+                  >
                     FAQs
                   </a>
                 </DropdownMenuItem>
@@ -116,13 +138,19 @@ export function MainHeader({ isTPA = false }) {
               </>
             )}
             <DropdownMenuItem>
-              <a href='https://docs.google.com/forms/d/e/1FAIpQLSfVaXGSESD__IRANrMjpBqkN9qyBGaAhaIVXdg37A46XxuKdg/viewform?usp=sf_link'>
+              <a
+                href='https://docs.google.com/forms/d/e/1FAIpQLSfVaXGSESD__IRANrMjpBqkN9qyBGaAhaIVXdg37A46XxuKdg/viewform?usp=sf_link'
+                target='_blank'
+              >
                 Submit Feedback
               </a>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <a href='https://cdle.colorado.gov/fraud-prevention'>
+              <a
+                href='https://cdle.colorado.gov/fraud-prevention'
+                target='_blank'
+              >
                 Report Fraud
               </a>
             </DropdownMenuItem>
@@ -141,6 +169,7 @@ export function FormHeader({ uri = '/' }) {
       <nav className='text-sm font-medium'>
         <a
           href={uri}
+          target='_blank'
           className={buttonVariants({
             variant: 'outline',
           })}
