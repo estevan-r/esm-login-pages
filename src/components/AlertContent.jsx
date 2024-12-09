@@ -12,7 +12,10 @@ export default function AlertContent() {
           Design and build by{' '}
           <Link uri='mailto:estevan.ruiz@state.co.us'>Estevan Ruiz</Link> |
           Source code:{' '}
-          <Link uri='#'>
+          <Link
+            uri='https://github.com/estevan-r/esm-login-pages'
+            target='blank'
+          >
             <GitHub />
           </Link>
         </li>
@@ -72,9 +75,9 @@ export default function AlertContent() {
   );
 }
 
-function Link({ uri = '', children }) {
+function Link({ uri = '', children, ...props }) {
   return (
-    <a href={uri} className='underline opacity-70 hover:opacity-100'>
+    <a href={uri} {...props} className='underline opacity-70 hover:opacity-100'>
       {children}
     </a>
   );
