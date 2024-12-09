@@ -21,6 +21,7 @@ export default function Footer({ isForm = false }) {
             <PrivacyStatement />
             <a
               href='https://cdle.colorado.gov/accessibility'
+              target='blank'
               className='underline transition duration-200 hover:text-foreground'
             >
               Accessibility

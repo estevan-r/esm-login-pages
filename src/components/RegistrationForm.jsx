@@ -133,12 +133,17 @@ export default function RegistrationForm({ isTPA = false }) {
               <HoverInfo>
                 <ul className='pl-4 list-disc text-balance space-y-2'>
                   <li>Minimum 14 characters</li>
-                  <li>Must contain upper and lower case characters</li>
-                  <li>Numbers (0–9)</li>
                   <li>
-                    And special characters:
-                    <br />
-                    ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+                    <li className='underline'>Must contain:</li>
+                    <ol className='mt-1 pl-4 list-decimal space-y-1'>
+                      <li>Upper and Lower case characters</li>
+                      <li>Numbers (0–9)</li>
+                      <li>
+                        Special characters:
+                        <br />
+                        ~!@#$%^&*_-+=`|\(){}[]:;"',.?/
+                      </li>
+                    </ol>
                   </li>
                 </ul>
               </HoverInfo>
