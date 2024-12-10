@@ -1,3 +1,4 @@
+import cdleEmblem from '@/assets/cdle-emblem-solid.svg';
 import {
   PrivacyStatement,
   ViewingTips,
@@ -31,7 +32,7 @@ export default function Footer({ isForm = false }) {
           </div>
           <div className='flex flex-col sm:flex-row gap-2 sm:items-center text-balance'>
             <img
-              src='src/assets/cdle-emblem-solid.svg'
+              src={cdleEmblem.src}
               alt='CDLE Emblem'
               width='48px'
               height='auto'

@@ -1,3 +1,4 @@
+import githubLogo from '@/assets/github.svg';
 import { CircleHelp } from 'lucide-react';
 
 export default function AlertContent() {
@@ -10,8 +11,8 @@ export default function AlertContent() {
         </li>
         <li>
           Design and build by{' '}
-          <Link uri='mailto:estevan.ruiz@state.co.us'>Estevan Ruiz</Link> |
-          Source code:{' '}
+          <Link uri='mailto:estevan.ruiz@state.co.us'>Estevan Ruiz - CDLE</Link>{' '}
+          | Source code:{' '}
           <Link
             uri='https://github.com/estevan-r/esm-login-pages'
             target='blank'
@@ -85,10 +86,6 @@ function Link({ uri = '', children, ...props }) {
 
 function GitHub() {
   return (
-    <img
-      src='src/assets/github.svg'
-      alt='GitHub Logo'
-      className='inline size-4'
-    />
+    <img src={githubLogo.src} alt='GitHub Logo' className='inline size-5' />
   );
 }

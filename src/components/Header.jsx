@@ -1,3 +1,4 @@
+import cdleLogo from '@/assets/cdle-logo.svg';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -15,7 +16,7 @@ function Logo() {
       className='focus:rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
     >
       <img
-        src='src/assets/cdle-logo.svg'
+        src={cdleLogo.src}
         alt='CDLE Logo'
         width='168px'
         height='auto'
