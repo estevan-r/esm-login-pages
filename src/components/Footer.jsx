@@ -9,7 +9,7 @@ export default function Footer({ isForm = false }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='px-4 pt-4 pb-6 w-full text-xs text-pretty text-muted-foreground'>
+    <footer className='px-4 pt-4 pb-6 w-full h-full text-xs text-pretty text-muted-foreground'>
       <div className='mx-auto max-w-[500px] lg:max-w-[936px]'>
         <div
           className={`flex flex-col gap-6 ${

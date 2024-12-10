@@ -19,23 +19,25 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 		<AlertDialog client:load title="Attention Users">
 			<AlertContent/>
 		</AlertDialog>
-		<LoginForm>
-			<LoginCard client:load title="TPA Login">
-				<div class="mt-2 text-muted-foreground text-center">
-					Don't have a TPA account?
-					<a 
-						href="/tpa-registration" 
-						class="font-bold text-blue-950/75 transition duration-200 hover:underline hover:text-blue-950/65"
-					>
-						Sign up
-					</a>
-				</div>
-			</LoginCard>
-		</LoginForm>
-		<Content>
-			<NewsAndAlerts customerType="TPA/Agents" />
-			<ScamProtection />
-		</Content>
+		<div class="flex py-5">
+			<LoginForm>
+				<LoginCard client:load title="TPA Login">
+					<div class="mt-2 text-muted-foreground text-center">
+						Don't have a TPA account?
+						<a 
+							href="/tpa-registration" 
+							class="font-bold text-blue-950/75 transition duration-200 hover:underline hover:text-blue-950/65"
+						>
+							Sign up
+						</a>
+					</div>
+				</LoginCard>
+			</LoginForm>
+			<Content>
+				<NewsAndAlerts customerType="TPA/Agents" />
+				<ScamProtection />
+			</Content>
+		</div>
 	</Wrapper>
 	<Footer client:load />
 </Layout>
