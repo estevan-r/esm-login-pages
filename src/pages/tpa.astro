@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import { MainHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
+import SkipContent from '@/components/SkipContent'
 import AlertDialog from '@/components/Alert'
 import AlertContent from '@/components/AlertContent'
 import Wrapper from '@/components/Wrapper'
@@ -12,6 +13,7 @@ import { NewsAndAlerts, ScamProtection } from '@/components/InfoCards'
 ---
 
 <Layout title="Third Party Administrator Login | CDLE">
+	<SkipContent />
 	<MainHeader client:load isTPA={true}/>
 	<Wrapper>
 		<AlertDialog client:load title="Attention Users">

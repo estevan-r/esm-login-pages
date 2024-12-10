@@ -170,7 +170,6 @@ export function FormHeader({ uri = '/' }) {
       <nav className='text-sm font-medium'>
         <a
           href={uri}
-          target='_blank'
           className={buttonVariants({
             variant: 'outline',
           })}
