@@ -1,13 +1,22 @@
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import PasswordInput from '@/components/PasswordInput';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components/ui/card';
 
-export default function LoginCard({ children = null, title }) {
+export default function LoginCard({ children = null, description }) {
   return (
     <Card className='z-10 px-6 py-6 grid max-w-[350px] gap-6 shadow-xl sm:px-8'>
       <CardHeader className='p-0 pb-4'>
-        <h1 className='text-lg font-bold tracking-tight'>{title}</h1>
+        <CardTitle className='font-serif text-xl'>MyUI Employer+</CardTitle>
+        <CardDescription className='font-medium tracking-tight'>
+          {description}
+        </CardDescription>
       </CardHeader>
       <form className='group'>
         <CardContent className='p-0 grid gap-6'>

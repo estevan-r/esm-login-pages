@@ -5,6 +5,7 @@ export default {
   theme: {
     fontFamily: {
       sans: ['Open Sans', 'sans-serif'],
+      serif: ['Roboto Slab', 'serif'],
     },
     extend: {
       backgroundImage: {
